@@ -1,0 +1,161 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    display: border-box;
+    color: rgba(196, 154, 108, 1);
+  }
+  
+  body {
+    background-color: rgba(26, 26, 26, 1);
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .navbar {
+      left: 0;
+      height: 40px;
+      width: 100%;
+      background-color: rgba(26, 26, 26, 1);
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      position: fixed;
+  }
+  
+  .navbar ul {
+    display: flex;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .welcome-section {
+    width: 75%;
+    max-width: 1000px;
+    height: 100vh;
+    max-height: 700px;
+    background-color: rgba(44, 27, 21, 0.9);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-title {
+    padding: 10px 0 20px 25px;
+    font-size: 32px;
+  }
+  
+  .main-subtitle {
+    padding-left: 10px;
+  }
+  
+  .projects {
+    width: 75%;
+    max-width: 1000px;
+    height: 100%;
+    background-color: rgba(115, 46, 62, 0.5);
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  
+  .projects-title {
+    text-align: center;
+    padding-top: 40px;
+    text-decoration: underline;
+  }
+  
+  .tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 45px;
+    width: 99%;
+    margin-bottom: 20px;
+  }
+  
+  .project-image {
+    width: 95%;
+    height: 95%;
+    background-size: 100% 100%; 
+  }
+  
+  .project-tile {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgba(44, 27, 21, 0.9);
+    border: 1px solid black;
+  }
+  
+  .project-title {
+    padding-top: 5px;
+    text-align: center;
+  }
+  
+  .all-projects-button {
+    margin: auto;
+    height: 40px;
+    width: 175px;
+    background-color: rgba(26, 26, 26, 1);
+    text-align: center;
+  }
+  
+  .button-text{
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+  
+  .profile-link-container {
+    width: 75%;
+    max-width: 1000px;
+    height: 100vh;
+    max-height: 700px;
+    margin: auto;
+    background-color: rgba(92, 64, 51, 0.7);
+  }
+  
+  .profile-page-header {
+    text-align: center;
+    padding-top: 35vh;
+  }
+  
+  .contact-box-array {
+    padding-top: 35vh;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-box a {
+    display: flex;
+  }
+  
+  .contact-name {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    h1 {
+      font-size: 16px;
+    }
+  
+    h3 {
+      font-size: 14px;
+    }
+  }

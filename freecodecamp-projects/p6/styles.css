@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+}
+
+.app-container {
+  background: linear-gradient(180deg, 
+    rgb(184, 184, 184) 0%,
+    white 2%,
+    #88046d 5%,
+    #88046d 95%,
+    white 98%,
+    rgb(184, 184, 184) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2%;
+  width: 65%;
+  margin: auto;
+  margin-top: 25vh;
+  height: 350px;
+  justify-content: flex-start;
+  color: #22f44c;
+}
+
+.app-title {
+  margin-top: 15px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.app-body {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+.app-body p {
+  margin-bottom: 40px;
+}
+
+.result-container {
+  width: 75%;
+  text-align: center;
+}

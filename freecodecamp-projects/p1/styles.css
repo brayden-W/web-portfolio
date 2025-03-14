@@ -1,0 +1,33 @@
+body {
+    background-color: #3A3746;
+  }
+  
+  h1, p {
+    margin: 1em auto;
+    text-align: center;
+    color: #C0B0F5;
+  }
+  
+  form {
+    margin: 10px;
+  }
+  
+  fieldset {
+    border: 0;
+    color: #C0B0F5;
+    background-color: #1A1137;
+    margin: 0 4rem;
+  }
+  
+  label {
+    display: block;
+    padding-bottom: 10px;
+  }
+  textarea {
+    display: block;
+  }
+  
+  legend {
+    padding-bottom:10px;
+    padding-top: 25px;
+  }

@@ -1,0 +1,242 @@
+:root {
+    --background-color: #121212;
+    --primary-text-color: #E0E0E0;
+    --secondary-text-color: #818181;
+    --accent-color: #BB86FC;
+    --highlight-color: #03DAC6;
+    --error-color: #CF6679;
+  }
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--primary-text-color);
+}
+
+html, body {
+    height: 100%;
+} 
+
+body {
+    background-color: var(--accent-color);
+    min-height: 100%;
+}
+
+.fcodecamp-main {
+    background-color: var(--background-color);
+    min-height: 100%;
+    width: 85%;
+    margin: auto;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    height: 40px;
+    position: fixed;
+    width: 20%;
+    right: 0;
+    background: transparent;
+    margin-right: 9vw;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+    opacity: 80%;
+    padding-right: 5px;
+    border-radius: 5%;
+    transition: all 0.5s;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-text-color);
+    opacity: 100%;
+}
+
+.back-text {
+    font-size: 12px;
+}
+
+.large-arrow {
+    font-size: 24px;
+}
+
+.main-header {
+    margin-top: 75px;
+    margin-bottom: 45px;
+    padding-left: 14vw;
+}
+
+details {
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    width: 85%;
+    margin: 20px auto;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    max-height: 2.5em; /* Adjust this value to match the height of the summary element */
+    padding-left: 10px;
+    background: linear-gradient(145deg, var(--highlight-color) 15%, var(--background-color) 75%);
+}
+
+details[open] {
+    max-height: 1000px; /* A large value to ensure it expands fully */
+  }
+
+details[open] summary {
+    background: linear-gradient(90deg,
+        var(--highlight-color) 0%, 
+        var(--background-color) 98%, 
+        var(--background-color) 100%);
+}
+
+summary {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    background: linear-gradient(90deg,
+        var(--highlight-color) 0%, 
+        var(--accent-color) 95%, 
+        var(--accent-color) 100%);
+    color: var(--background-color);
+}
+
+summary:hover {
+    background: linear-gradient(90deg,
+        var(--highlight-color) 0%, 
+        var(--background-color) 98%, 
+        var(--background-color) 100%);
+}
+
+.project-collection {
+    background-color: var(--highlight-color);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid var(--highlight-color);
+    border-radius: 5px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-areas: 
+        "title title"
+        "desc link";
+    grid-template-columns: 3fr 1fr;
+    background-color: rgba(0, 0, 0, .9);
+    padding-left: 5px;
+}
+
+
+.title {
+    grid-area: title;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.desc {
+    grid-area: desc;
+    font-size: 12px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.link  {
+    grid-area: link;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+hr {
+    width: 10%;
+    margin: auto;
+}
+
+table, th, td {
+    border: 1px solid var(--highlight-color);
+    border-collapse: collapse;
+    padding: 4px;
+}
+
+.table {
+    display: table;
+    width: 85%;
+    margin: 20px auto;
+}
+
+.tbl-title {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    font-weight: bold;
+    text-align: center;
+    height: 35px;
+    font-size: 16px;
+}
+
+.tbl-header-row td {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    font-weight: bold;
+    text-align: center;
+    height: 30px;
+}
+
+.title-col, .desc-col {
+    height: 35px;
+}
+
+.title-col {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 14px;
+}
+
+.desc-col {
+    font-size: 12px;
+}
+
+
+@media only screen and (max-width: 660px) {
+    summary {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        width: 30%;
+    }
+
+    summary {
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .desc {
+        font-size: 10px;
+    }
+
+    .link {
+        font-size: 10px;
+    }
+}
+
