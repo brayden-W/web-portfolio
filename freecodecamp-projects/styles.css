@@ -15,6 +15,10 @@
     color: var(--primary-text-color);
 }
 
+a { 
+    text-decoration: none;
+}
+
 html, body {
     height: 100%;
 } 
@@ -138,7 +142,9 @@ summary:hover {
         "desc link";
     grid-template-columns: 3fr 1fr;
     background-color: rgba(0, 0, 0, .9);
-    padding-left: 5px;
+    padding: 10px 5px;
+    gap: 5px;
+
 }
 
 
@@ -154,12 +160,27 @@ summary:hover {
     font-size: 12px;
     padding-bottom: 10px;
     padding-left: 10px;
+    align-self: center;
 }
 
 .link  {
-    grid-area: link;
     font-size: 14px;
-    padding-right: 10px;
+    background-color: var(--highlight-color);
+    color: var(--background-color);
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    height: 30px;
+    width: 70px;
+    border-radius: 4%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 6px;
+    border: 3px inset transparent;
+    transition: border 0.3s;
+}
+
+.link:hover {
+    border: 3px inset var(--accent-color);
 }
 
 hr {
