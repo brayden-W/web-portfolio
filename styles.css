@@ -183,6 +183,7 @@ section {
   gap: 5px;
   align-items: start;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 
