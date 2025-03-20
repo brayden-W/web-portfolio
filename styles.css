@@ -24,7 +24,7 @@ body {
 .main {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 325px auto;
+  grid-template-rows: 325px auto auto auto;
   gap: 15px;
   border: none;
   background: transparent;
@@ -45,7 +45,7 @@ section {
   min-height: 250px;
   border-radius: 5%;
   width: 100%;
-  max-height: 700px;
+  height: auto;
   background-color: var(--section-bg-color);
   background: linear-gradient(180deg,
     var(--section-bg-color) 0%,
@@ -290,7 +290,132 @@ section {
 }
 
 /* END BIO SECTION RULES */
+/* START CREDENTIALS SECTION RULES */
 
+.credentials-section {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  height: fit-content;
+}
+
+.credentials-box  {
+  margin: 10px 50px;
+}
+
+.credentials-title {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 2vh;
+  color: var(--background-color);
+  text-decoration: underline;
+}
+
+.credential {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 50% 50%;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  border-bottom: var(--highlight-color) solid 2px;
+}
+
+.credential:first-of-type {
+  padding-top: 15px;
+}
+
+.credential:last-of-type {
+  border: none;
+  padding-bottom: 15px;
+}
+
+.cred-institution {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  font-size: 12px;
+  padding-left: 10px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.cred-title {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+.cred-date {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  font-size: 12px;
+  padding-right: 5px;
+  text-align: right;
+  align-self: center;
+}
+.cred-img img {
+  width: 48%;
+  min-width: 150px;
+  margin: 5px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+/* END CREDENTIALS SECTION RULES */
+/* START AWARDS SECTION RULES */
+
+.awards {
+  grid-row: 4 / 5;
+  grid-column: 1 / 3;
+}
+
+.cred-img {
+  width: 98%;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cred-img:last-of-type {
+  padding-bottom: 10px;
+}
+
+.NCAEBadges {
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.badge-container a {
+  border-radius: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div > a > img:hover {
+  opacity: 92%;
+  background: radial-gradient(circle at center, white 0, white 10%, transparent 50%, transparent 100%);
+}
+
+.awards h3 {
+  font-size: 18px;
+  width: 40%;
+  margin: 10px auto;
+  color: var(--background-color);
+  text-decoration: underline;
+  text-align: center;
+}
+
+.awards h3:last-of-type {
+  padding-top: 30px;
+}
+
+
+
+
+
+/* END AWARDS SECTION RULES */
 /* START MEDIA QUERIES */
 
 @media only screen and (max-width: 1200px) {
@@ -453,6 +578,37 @@ section {
     display: block;
   }
 
+  .NCAEBadges {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  }
+
+  .badge-container img {
+    width: 40px;
+  }
+
+  .credentials-box {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .cred-institution {
+    font-size: 8px;
+  }
+
+  .cred-img img {
+    width: 97%;
+  }
+
+  .cred-title {
+    font-size: 10px;
+  }
+
+  .cred-date {
+    font-size: 10px;
+  }
+
   .main-title {
     font-size: 22px;
     padding-left: 10px;
@@ -483,7 +639,7 @@ section {
   }
 
   section {
-    width: 75%;
+    width: 95%;
     min-height: 200px;
     margin: 15px auto
   }
