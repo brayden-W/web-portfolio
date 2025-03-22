@@ -186,8 +186,9 @@ section {
   width: 85%;
   display: grid;
   grid-template-columns: 65% 35% ;
-  grid-template-rows: 40% 20% 25%; 
+  grid-template-rows: fit-content 20% 20% 25%; 
   gap: 5px;
+  padding-bottom: 15px;
 }
 
 
@@ -204,7 +205,8 @@ section {
   grid-column: 1 / 2;
   grid-row: 2 / 4;
   display: flex;
-  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .bio h3 {
@@ -213,15 +215,12 @@ section {
   padding-left: 5px;
 }
 
-.bio p {
-  overflow-y: auto;
-}
-
 .my-image {
-  margin: 30px auto 0 auto;
+  margin: 5px;
   max-height: 270px;
   max-width: 270px;
-  width: 90%;
+  width: 35vw;
+  height: 35vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -582,7 +581,6 @@ div > a > img:hover {
 
   .profile-box {
     grid-template-columns: 100%;
-    grid-template-rows: 40% 20% 20% 35%;
   }
 
   .contact-box-array {
@@ -618,9 +616,6 @@ div > a > img:hover {
 
   .profile-box {
     width: 100%;
-    grid-template-columns: 100%;
-    grid-template-rows: 65% 10% 5% 35%;
-    overflow-y: auto;
   }
 
   .img-box {
