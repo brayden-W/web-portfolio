@@ -26,7 +26,7 @@ body {
 .main {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 325px auto auto auto;
+  grid-template-rows: auto auto auto auto;
   gap: 15px;
   border: none;
   background: transparent;
@@ -47,7 +47,7 @@ section {
   min-height: 250px;
   border-radius: 5%;
   width: 100%;
-  height: auto;
+  height: fit-content;
   background-color: var(--section-bg-color);
   background: linear-gradient(180deg,
     var(--section-bg-color) 0%,
@@ -66,7 +66,6 @@ section {
 }
 
 .projects {
-  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,9 +77,7 @@ section {
 .profile-section {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
-  height: 50vh;
   min-height: 500px;
-  max-height: none;
   justify-self: center;
 }
 
@@ -105,7 +102,7 @@ section {
 
 .projects-title {
   text-align: center;
-  padding-top: 2vh;
+  padding-top: 15px;
   text-decoration: underline;
   color: var(--background-color);
 }
@@ -114,21 +111,32 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 4%;
   width: 95%;
-  overflow-y: auto;
+  margin: 10px 0;
+  height: fit-content;
 }
 
 .tile-container a {
   text-decoration: none;
   color: var(--background-color);
-  margin: 5px;
+  max-width: 75px;
+  border-radius: 8px;
+  border: solid transparent 2px;
+}
+
+.tile-container a:hover .project-tile {
+  background: linear-gradient(45deg, #b584f0, #F22998, #b584f0);
+  cursor: pointer;
+}
+
+.tile-container a:hover {
+  border: solid var(--accent-color) 2px;
 }
 
 .project-image {
-  width: 85%;
-  height: 85%;
-  margin-top: 2%;
+  position: absolute;
+  height: 55px;
+  width: 55px;
   background-size: 100% 100%;
 }
 
@@ -137,36 +145,29 @@ section {
 }
 
 .project-image img {
-  width: 95%;
-  height: 95%;
+  
   opacity: 0;
 }
 
 .project-tile {
-  width: 200px;
-  height: 160px;
+  width: 75px;
+  height: 58px;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   flex-direction: column;
   align-items: center;
   padding-top: 5px;
   padding-bottom: 5px;
-  margin-bottom: 10px;
   border-radius: 5px;
   background: linear-gradient(45deg, #9c57f1, #F22998, #9c57f1);
   border: var(--secondary-color) solid 1px;
 }
 
-.project-tile:hover {
-  background: linear-gradient(45deg, #b584f0, #F22998, #b584f0);
-  cursor: pointer;
-}
-
 
 .project-title {
-  padding-top: 5px;
+  justify-self: end;
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .projects a {
@@ -181,21 +182,18 @@ section {
 
 .profile-box {
   margin: 0 auto;
-  height: 100%;
-  width: 80%;
+  height: fit-content;
+  width: 85%;
   display: grid;
   grid-template-columns: 65% 35% ;
-  grid-template-rows: 40% 55%; 
+  grid-template-rows: 40% 20% 25%; 
   gap: 5px;
-  align-items: start;
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 
 .bio {
   grid-column: 1 / 3;
-  grid-row: 1 / 3;
+  grid-row: 1 / 2;
   font-size: 16px;
   margin: 0 20px;
   justify-self: stretch;
@@ -204,11 +202,8 @@ section {
 
 .img-box {
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-row: 2 / 4;
   display: flex;
-  justify-content: center;
-  align-self: center;
-  margin: 40px;
   padding-bottom: 20px;
 }
 
@@ -252,12 +247,10 @@ section {
 
 .contact-box-array {
   grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  margin-top: 25px;
+  grid-row: 3 / 4;
   display: flex;
   justify-content: space-evenly;
-  align-self: end;
-  justify-self: right;
+  height: 35px;
 }
 
 .contact-box a {
@@ -265,6 +258,7 @@ section {
   align-items: center;
   text-decoration: none;
   color: var(--background-color);
+  height: 35px;
 }
 
 .contact-box {
@@ -280,7 +274,7 @@ section {
   border: solid white 2px;
 }
 
-.contact-box a:hover {
+.contact-box:hover a {
   color: var(--primary-text-color);
 }
 
@@ -438,58 +432,6 @@ div > a > img:hover {
   }
 }
 
-@media only screen and (max-width: 830px) {
-  .profile-section {
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 55% 45%;
-  }
-
-  .profile-page-footer {
-    grid-row: 2 / 3;
-    align-self: center;
-  }
-
-  .contact-box-array { 
-    grid-row: 2 / 3;
-    align-self: end;
-    align-items: end;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 740px) {
-  h1 {
-    font-size: 16px;
-  }
-
-  h3 {
-    font-size: 14px;
-  }
-
-  .profile-box {
-    width: 90%;
-  }
-
-  .profile-page-footer h1 {
-    font-size: 17px;
-  }
-
-  .profile-page-footer h3 {
-    font-size: 15px;
-  }
-
-  .tile-container a {
-    margin-bottom: 5px;
-  }
-
-  .contact-box-array {
-    align-self: end;
-    justify-self: end;
-    align-items: end;
-    flex-direction: column;
-  }
-}
-
 @media only screen and (max-width: 700px) {
   .contact-name {
     display: none;
@@ -509,26 +451,23 @@ div > a > img:hover {
   }
 
   .img-box {
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
     grid-column: 1 / 2;
-  }
-
-  .profile-box {
-    grid-template-rows: 45% 50%;
   }
 
   .profile-page-footer {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     justify-self: center;
-    align-self: center;
+    align-self: start;
+    margin-top: 30px;
   }
 
   .contact-box-array {
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     justify-self: center;
-    align-self: end;
+    align-self: start;
     flex-direction: row;
   }
 }
@@ -541,7 +480,7 @@ div > a > img:hover {
   }
 
   .projects {
-    min-height: 250px;
+    height: fit-content;
   }
 
   .NCAEBadges {
@@ -603,34 +542,30 @@ div > a > img:hover {
   .tile-container a {
     text-decoration: none;
     color: var(--background-color);
-    height: 122px;
-    margin: 5px;
+    max-width: none;
   }
   
   .project-image {
-    width: 70%;
-    height: 70%;
-    margin-top: 2%;
     background-size: 100% 100%;
   }
   
   .project-tile {
-    width: 141px;
-    height: 113px;
+    width: 106px;
+    height: 85px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-radius: 5px;
     background: linear-gradient(45deg, #9c57f1, #F22998, #9c57f1);
     border: var(--secondary-color) solid 1px;
   }
 
-  .projects {
-    height: 200px;
+  .project-title {
+    max-width: 106px;
   }
   
 }
@@ -646,25 +581,25 @@ div > a > img:hover {
   }
 
   .profile-box {
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 40% 20% 35%;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 20% 20% 35%;
   }
 
   .contact-box-array {
-    grid-row: 2 / 3;
-    grid-column: 1 / 3;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    padding: 0;
+    margin: 0;
   }
 
   .profile-page-footer {
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
 
   .img-box {
-    grid-row: 3 / 4;
-    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
     max-width: 200px;
     justify-self: center;
   }
