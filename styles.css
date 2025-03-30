@@ -1,13 +1,11 @@
 /* BEGIN GLOBALS */
 
 :root {
-  --background-color: #100E40;
-  --section-bg-color: #5B44F2;
-  --primary-text-color: #B0B0B0;
-  --secondary-text-color: #B0B0B0;
-  --accent-color: #F22998;
-  --highlight-color: #04D960;
-  --hover-bg-color: #1C1973;
+  --background-color: #0D0D0D;
+  --section-bg-color: #F2EADF;
+  --primary-text-color: #0D0D0D;
+  --secondary-text-color: #403732;
+  --complementary-color: #8C7D70;
 }
 
 *, ::before, ::after {
@@ -45,13 +43,15 @@ body {
 section {
   border: var(--highlight-color) solid 2px;
   min-height: 250px;
-  border-radius: 5%;
+  border-radius: 50px;
   width: 100%;
   height: fit-content;
   background-color: var(--section-bg-color);
   background: linear-gradient(180deg,
-    var(--section-bg-color) 0%,
-    var(--section-bg-color) 97%,
+    var(--background-color) 0%,
+    var(--section-bg-color) 2%,
+    var(--section-bg-color) 50%,
+    var(--section-bg-color) 98%,
     var(--background-color) 100%);
 }
 
@@ -88,7 +88,7 @@ section {
 .main-title {
   padding: 10px 0 20px 25px;
   font-size: 32px;
-  color: var(--background-color);
+  color: var(--secondary-text-color);
 }
 
 .main-subtitle {
@@ -112,13 +112,12 @@ section {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 95%;
-  margin: 10px 0;
+  margin: 20px 0;
   height: fit-content;
 }
 
 .tile-container a {
   text-decoration: none;
-  color: var(--background-color);
   max-width: 75px;
   border-radius: 8px;
   border: solid transparent 2px;
@@ -127,10 +126,6 @@ section {
 .tile-container a:hover .project-tile {
   background: linear-gradient(45deg, #b584f0, #F22998, #b584f0);
   cursor: pointer;
-}
-
-.tile-container a:hover {
-  border: solid var(--accent-color) 2px;
 }
 
 .project-image {
@@ -145,7 +140,6 @@ section {
 }
 
 .project-image img {
-  
   opacity: 0;
 }
 
@@ -160,7 +154,7 @@ section {
   padding-bottom: 5px;
   border-radius: 5px;
   background: linear-gradient(45deg, #9c57f1, #F22998, #9c57f1);
-  border: var(--secondary-color) solid 1px;
+  border: var(--complementary-color) solid 1px;
 }
 
 
@@ -172,7 +166,7 @@ section {
 
 .projects a {
   text-decoration: none;
-  color: var(--background-color);
+  color: var(--primary-text-color);
 }
 
 /* END PROJECT SECTION RULES */
@@ -188,7 +182,7 @@ section {
   grid-template-columns: 65% 35% ;
   grid-template-rows: fit-content 20% 20% 25%; 
   gap: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 35px;
 }
 
 
@@ -196,7 +190,7 @@ section {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   font-size: 16px;
-  margin: 0 20px;
+  margin: 20px;
   justify-self: stretch;
   padding-top: 20px;
 }
@@ -233,13 +227,13 @@ section {
 
 .profile-page-footer h1 {
   font-size: 22px;
-  color: var(--background-color);
+  color: var(--secondary-text-color);
   text-align: left;
 }
 
 .profile-page-footer h3 {
   font-size: 18px;
-  color: var(--background-color);
+  color: var(--secondary-text-color);
   text-align: right;
   padding-bottom: 10px;
 }
@@ -268,17 +262,16 @@ section {
 }
 
 .contact-box:hover {
-  background-color: #131313;
-  color: var(--primary-text-color);
+  background-color: var(--secondary-text-color);
   border: solid white 2px;
 }
 
 .contact-box:hover a {
-  color: var(--primary-text-color);
+  color: var(--section-bg-color);
 }
 
 .contact-box:hover .contact-icon {
-  color: var(--primary-text-color);
+  color: var(--section-bg-color);
 }
 
 .contact-name {
@@ -380,7 +373,7 @@ section {
 }
 
 .cred-img:last-of-type {
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .NCAEBadges {
@@ -390,31 +383,27 @@ section {
   justify-content: space-evenly;
 }
 
-.badge-container a {
-  border-radius: 75%;
-}
-
 .badge-container img {
   width: 80px;
   margin: 5px 0;
+  border-radius: 100px;
 }
 
 div > a > img:hover {
-  opacity: 92%;
-  background: radial-gradient(circle at center, white 0, white 10%, transparent 50%, transparent 100%);
+  opacity: 69%;
 }
 
 .awards h3 {
   font-size: 18px;
   width: 40%;
-  margin: 10px auto;
+  margin:35px auto;
   color: var(--background-color);
   text-decoration: underline;
   text-align: center;
 }
 
 .awards h3:last-of-type {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 
