@@ -125,6 +125,40 @@ section {
   background: var(--color-gradient1);
 }
 
+.resume-btn {
+  margin: 10px auto;
+  height: 3vh;
+  width: 175px;
+  background-color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: var(--secondary-text-color) solid 4px;
+  border-radius: 5px;
+}
+
+.resume-btn > a {
+  text-decoration: none;
+  color: var(--background-color);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.resume-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(0deg,
+    var(--primary-text-color) 0%,
+    var(--secondary-text-color) 25%,
+    var(--secondary-text-color) 75%,
+    var(--primary-text-color) 100%);
+  border: var(--primary-text-color) solid 4px;
+}
+
+.resume-btn:hover a{
+  color: var(--section-bg-color);
+}
+
 /* END WELCOME SECTION RULES */
 
 /* START PROJECT SECTION RULES */
@@ -166,6 +200,11 @@ section {
 
 .freeCodeAcademy-projects > .project-image {
   border: 0;
+}
+
+.clicksafe > .project-image {
+  border: 0;
+  margin-right: 7px;
 }
 
 .project-image img {
@@ -651,6 +690,16 @@ div > a > img:hover {
     grid-column: 1 / 2;
     max-width: 200px;
     justify-self: center;
+  }
+
+  div.project-tile {
+    width: 81.62px;
+    height: 65.45px;
+  }
+
+  div.project-title {
+    max-width: 81.62px;
+    font-size: 10px;
   }
 
   .NCAEBadges {
