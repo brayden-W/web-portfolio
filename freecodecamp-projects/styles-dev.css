@@ -1,0 +1,172 @@
+:root {
+    --body-background: #7E8FF2;
+    --section-background: #F2F2F2;
+    --text-color: #262626;
+    --header-color: #2E4BF2;
+    --midway-color: #4B64F2;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .empty {
+    display: none;
+  }
+
+  header {
+    background-color: var(--header-color);
+    color: var(--section-background);
+    -webkit-text-stroke-color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: 1px solid var(--text-color);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  header nav ul li a {
+    position: absolute;
+    top: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: var(--section-background);
+    font-size: 22px;
+    opacity: 80%;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+
+body {
+  background-color: var(--body-background);
+  color: var(--text-color);
+  height: fit-content;
+  
+}
+
+.fcodecamp-main {
+  border: 1px solid var(--text-color);
+}
+
+section {
+  background-color: var(--section-background);
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 1200px;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+main {
+  height: 100%;
+}
+
+svg {
+  flex-grow: 1;
+  height: 75px;
+  max-width: 20%;
+  transition: transform 0.17s ease;
+}
+
+.empty svg {
+  display: none;
+}
+
+svg path {
+  fill: var(--midway-color);
+  transition: fill 0.17s ease;
+}
+
+svg:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+svg:hover path {
+  fill: var(--body-background);
+}
+
+
+/* TODO: TOGGLE THIS ON BUTTON CLICKS*/
+.selected path {
+  fill: var(--body-background);
+}
+
+.full-project-selection-container {
+  height: fit-content;
+  margin-bottom: 5px;
+}
+
+.project-section-bar {
+  display: flex;
+  justify-content: center;
+  max-height: 100px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  gap: 5px;
+}
+
+.project-selector-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.project-display-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--midway-color);
+  border-top: var(--text-color) 1px solid;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    font-size: 1.5em;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  svg {
+    height: 50px;
+    max-width: 40%;
+  }
+
+  .project-section-bar {
+    max-height: 50px;
+  }
+
+}
+
+@media only screen and (max-width: 430px) {
+  header {
+    font-size: 1.2em;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  svg {
+    height: 40px;
+    max-width: 50%;
+  }
+
+  .project-section-bar {
+    max-height: 40px;
+  }
+  
+}

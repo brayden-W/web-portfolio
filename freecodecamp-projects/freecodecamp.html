@@ -3,74 +3,164 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-dev.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>My freeCodeCamp Projects</title>
+    <title class="empty">My freeCodeCamp Projects</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="../index.html"><span class="large-arrow">&#8612;</span><span class="back-text">Go Back</span></a></li>
-      </ul>
-    </nav>
     <section class="fcodecamp-main">
       <header class="main-header">
-        <h1>My freeCodeCamp Projects</h1>
+        <h1>FreeCodeCamp Projects</h1>
+        <nav>
+            <ul>
+              <li><a href="../index.html"><span class="large-arrow">&#8612;</span><span class="back-text">Portfolio Home</span></a></li>
+            </ul>
+          </nav>
       </header>
       <main>
-        <section class="fcodecamp-projects">   
-          <details class="resp-web-design-container">
-            <summary class="details-title">Responsive Web Design</summary>
-            <div class="project-collection">
-              <div class="project-container">
-                <h3 class="title">Project 1: Feedback Survey</h3>       
-                <p class="desc">Applies concepts of HTML input types in the form of a survey.</p>
-                <a class="link" href="p1/survey.html" target="_blank">View</a>
-              </div>
-              <hr>
-              <div class="project-container">
-                <h3 class="title">Project 2: Tribute Page</h3>
-                <p class="desc">A Marie Curie tribute page organized with CSS flexbox.</p>
-                <a class="link" href="p2/tribute-page.html" target="_blank">View</a>
-              </div>
-              <hr>
-              <div class="project-container">
-                <h3 class="title">Project 3: "Technical" Documentation Page</h3>
-                <p class="desc">Sandwich recipes organized with a navigation menu and linked sections.</p>
-                <a class="link" href="p3/doc-page.html" target="_blank">View</a>
-              </div>
-              <hr>
-              <div class="project-container">
-                <h3 class="title">Project 4: Product Landing Page</h3>
-                <p class="desc">This pancake shop landing page uses advanced CSS styling as well as an iframe.</p>
-                <a class="link" href="p4/product.html" target="_blank">View</a>
-              </div>
-              <hr>
-              <div class="project-container">
-                <h3 class="title">Project 5: Final - Professional Portfolio</h3>
-                <p class="desc">The original version of my professional portfolio.</p>
-                <a class="link" href="p5/old-portfolio.html" target="_blank">View</a>
-              </div>
-            </div>
-          </details>
-          <details class="resp-web-design-container">
-            <summary class="details-title">JavaScript Algorithms and Data Structures</summary>
-            <div class="project-collection">
-              <div class="project-container">
-                <h3 class="title">Project 1: Build a Palindrome Checker</h3>       
-                <p class="desc">Applies concepts of DOM retrieval and modification.</p>
-                <a class="link" href="p6/palindrome-checker.html" target="_blank">View</a>
-              </div>
-              <hr>
-              <div class="project-container">
-                <h3 class="title">Project 2: Build a Roman Numeral Converter</h3>       
-                <p class="desc">Uses recursion to convert numbers to Roman Numerals.</p>
-                <a class="link" href="p7/romanconverter.html" target="_blank">View</a>
-              </div>
-            </div>
-          </details>
-        </section>
+        <div class="full-project-selection-container">
+          <div class="project-section-bar">
+            <!-- Source: https://css-tricks.com/svg-path-syntax-illustrated-guide/ -->
+            <svg id="respWebDesign-btn" viewBox="0 0 206.25 75" preserveAspectRatio="xMidYMid meet">
+              <path fill="#4B64F2" stroke="none" d="
+                M 0,37.5
+                C 0,0 0,0 103.125,0
+                  206.25,0 206.25,0 206.25,37.5
+                  206.25,75 206.25,75 103.125,75
+                  0,75 0,75 0,37.5
+              ">
+              </path>
+              <text 
+                x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="20px" font-family="Arial, sans-serif">
+                <tspan x="50%" dy="-0.6em">Responsive Web</tspan><tspan x="50%" dy="1.2em">Design</tspan></text>
+            </svg>
+            <svg id="jsAlgorithmsAndDataStructures-btn" viewBox="0 0 206.25 75" preserveAspectRatio="xMidYMid meet">
+              <path fill="#4B64F2" stroke="none" d="
+                M 0,37.5
+                C 0,0 0,0 103.125,0
+                  206.25,0 206.25,0 206.25,37.5
+                  206.25,75 206.25,75 103.125,75
+                  0,75 0,75 0,37.5
+              "> 
+              </path>
+              <text 
+                x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="20px" font-family="Arial, sans-serif">
+                <tspan x="50%" dy="-0.6em">JavaScript Algorithms</tspan><tspan x="50%" dy="1.2em">and Data Structures</tspan></text>
+            </svg>
+          </div>
+          <div id="respWebDesign-project-bar" class="project-selector-bar empty">
+              <svg id="feedbackForm-btn" viewBox="0 0 168.75 60" preserveAspectRatio="xMidYMid meet">
+                <path fill="#4B64F2" stroke="none" d="
+                  M 0,37.5
+                  C 0,0 0,0 84.753,0
+                    168.75,0 168.75,0 168.75,30
+                    168.75,60 168.75,60 84.753,60
+                    0,60 0,60 0,30
+                "><!-- -.1x to x coords: 187.5 > 168.75 ; 93.75 > 84.753-->
+                </path>
+                <text 
+                  x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="14px" font-family="Arial, sans-serif">
+                  <tspan>Feedback Form</tspan></text>
+              </svg>
+              <svg id="tributePage-btn" viewBox="0 0 168.75 60" preserveAspectRatio="xMidYMid meet">
+                <path fill="#4B64F2" stroke="none" d="
+                  M 0,37.5
+                  C 0,0 0,0 84.753,0
+                    168.75,0 168.75,0 168.75,30
+                    168.75,60 168.75,60 84.753,60
+                    0,60 0,60 0,30
+                "><!-- -.2x to y coords: 75 > 60 ; 37.5 > 30-->
+                </path>
+                <text 
+                  x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="14px" font-family="Arial, sans-serif">
+                  <tspan>Tribute Page</tspan></text>
+              </svg>
+              <svg id="technicalDocPage-btn" viewBox="0 0 168.75 60" preserveAspectRatio="xMidYMid meet">
+                <path fill="#4B64F2" stroke="none" d="
+                  M 0,37.5
+                  C 0,0 0,0 84.753,0
+                    168.75,0 168.75,0 168.75,30
+                    168.75,60 168.75,60 84.753,60
+                    0,60 0,60 0,30
+                "><!-- -.2x to y coords: 75 > 60 ; 37.5 > 30-->
+                </path>
+                <text 
+                  x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="14px" font-family="Arial, sans-serif">
+                  <tspan x="50%" dy="-0.6em">Technical</tspan><tspan x="50%" dy="1.2em">Documentation Page</tspan></text>
+              </svg>
+              <svg id="prodLandingPage-btn" viewBox="0 0 168.75 60" preserveAspectRatio="xMidYMid meet">
+                <path fill="#4B64F2" stroke="none" d="
+                  M 0,37.5
+                  C 0,0 0,0 84.753,0
+                    168.75,0 168.75,0 168.75,30
+                    168.75,60 168.75,60 84.753,60
+                    0,60 0,60 0,30
+                "><!-- -.2x to y coords: 75 > 60 ; 37.5 > 30-->
+                </path>
+                <text 
+                  x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="14px" font-family="Arial, sans-serif">
+                  <tspan>Product Landing Page</tspan></text>
+              </svg>
+              <svg id="portfolioPage-btn" viewBox="0 0 168.75 60" preserveAspectRatio="xMidYMid meet">
+                <path fill="#4B64F2" stroke="none" d="
+                  M 0,37.5
+                  C 0,0 0,0 84.753,0
+                    168.75,0 168.75,0 168.75,30
+                    168.75,60 168.75,60 84.753,60
+                    0,60 0,60 0,30
+                "><!-- -.2x to y coords: 75 > 60 ; 37.5 > 30-->
+                </path>
+                <text 
+                  x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="14px" font-family="Arial, sans-serif">
+                  <tspan x="50%" dy="-0.6em">Final - Professional</tspan><tspan x="50%" dy="1.2em">Portfolio</tspan></text>
+              </svg>  
+          </div>
+          <div id="jsAlgorithmsAndDataStructures-project-bar" class="project-selector-bar empty">
+            <svg id="palindromeChecker-btn" viewBox="0 0 168.75 60" preserveAspectRatio="xMidYMid meet">
+              <path fill="#4B64F2" stroke="none" d="
+                M 0,37.5
+                C 0,0 0,0 84.753,0
+                  168.75,0 168.75,0 168.75,30
+                  168.75,60 168.75,60 84.753,60
+                  0,60 0,60 0,30
+              "><!-- -.1x to x coords: 187.5 > 168.75 ; 93.75 > 84.753-->
+              </path>
+              <text 
+                x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="14px" font-family="Arial, sans-serif">
+                <tspan>Palindrome Checker</tspan></text>
+            </svg>
+            <svg id="romanNumeralConverter-btn" viewBox="0 0 168.75 60" preserveAspectRatio="xMidYMid meet">
+              <path fill="#4B64F2" stroke="none" d="
+                M 0,37.5
+                C 0,0 0,0 84.753,0
+                  168.75,0 168.75,0 168.75,30
+                  168.75,60 168.75,60 84.753,60
+                  0,60 0,60 0,30
+              "><!-- -.2x to y coords: 75 > 60 ; 37.5 > 30-->
+              </path>
+              <text 
+                x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="14px" font-family="Arial, sans-serif">
+                <tspan x="50%" dy="-0.6em">Roman Numeral</tspan><tspan x="50%" dy="1.2em">Converter</tspan></text>
+            </svg>
+            <svg id="phoneNumberValidator-btn" viewBox="0 0 168.75 60" preserveAspectRatio="xMidYMid meet">
+              <path fill="#4B64F2" stroke="none" d="
+                M 0,37.5
+                C 0,0 0,0 84.753,0
+                  168.75,0 168.75,0 168.75,30
+                  168.75,60 168.75,60 84.753,60
+                  0,60 0,60 0,30
+              "><!-- -.2x to y coords: 75 > 60 ; 37.5 > 30-->
+              </path>
+              <text 
+                x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="14px" font-family="Arial, sans-serif">
+                <tspan x="50%" dy="-0.6em">Phone Number</tspan><tspan x="50%" dy="1.2em">Validator</tspan></text>
+            </svg>
+        </div>
+      </div>
+      <div class="project-display-container">
+        <iframe id="project-viewer" class="project-viewer" src="" height="750px" width="90%" frameborder="0" scrolling="yes" allowfullscreen></iframe>
+      </div>
       </main>
-    </section>
+    <script src="./script.js"></script>
   </body>
 </html>

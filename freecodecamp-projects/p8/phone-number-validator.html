@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Telephone Number Validator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="main-section">
+      <header class="main-header">
+        <h3 class="main-title">Phone Number Validator</h3>
+      </header>
+      <p class="main-subtitle">For North American numbers</p>
+      <div class="app-outer-container">
+        <div class="app-inner-container">
+          <label for="user-input">Phone: +1 <input placeholder="XXXXXXXXXX" id="user-input" type="text" required>
+          </label>
+          <div class="output-container" id="output-container">
+            <p class="output-container-title">History</p>
+            <div id="results-div">
+            </div>
+          </div>
+          <div class="button-container">
+            <button type="button" id="check-btn">
+              Check
+            </button>
+            <button type="button" id="clear-btn">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+
+</html>

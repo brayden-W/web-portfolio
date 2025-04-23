@@ -1,0 +1,145 @@
+:root {
+    --background-color: #8771D9;
+    --foreground-color: #7E55D9;
+    --sway-color1: #8469BF;
+    --sway-color2:#9B8ABF;
+    --text-color: #DED5F2;
+  }
+  
+  *, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    display: border-box;
+  }
+  
+  html {
+    background-color: var(--background-color);
+  }
+  
+  body {
+    width: 100%;
+    margin: 0 auto;
+    color: var(--text-color);
+  }
+  
+  .main-section {
+    width: 320px;
+    height: 480px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+      140deg,
+      var(--sway-color2) 0%,
+      var(--sway-color1) 15%,
+      var(--background-color) 60%,
+      var(--sway-color2) 
+    );
+    border: var(--foreground-color) 5px solid;
+    border-radius: 15px;
+  }
+  
+  .main-section * {
+    margin: 3px 0;
+  }
+  
+  .main-title {
+    padding-top: 15px;
+    font-size: 22px;
+  }
+  
+  .app-outer-container {
+    height: 385px;
+  }
+  
+  .app-inner-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+    background-color: var(--foreground-color);
+    color: var(--text-color);
+    border-color: var(--sway-color1);
+  }
+  
+  .output-container {
+    display: flex;
+    height: 285px;
+    flex-direction: column;
+    align-items: center;
+    border: var(--foreground-color) solid 3px;
+  }
+  
+  #results {
+    overflow-y: auto;
+  }
+  
+  .results-div {
+    height: 50px;
+    width: 96%;
+    margin-top: 15px;
+  }
+  
+  .outcome {
+    height: 50px;
+    width: 98%;
+    text-align: center;
+    margin: auto;
+    border-bottom: 2px solid var(--foreground-color);
+  }
+  
+  .output-container-title {
+    width: 96%;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--foreground-color);
+  }
+  
+  
+  .empty {
+    display: none;
+  }
+  
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  button {
+    width: 45%;
+    height: 35px;
+    background-color: var(--text-color);
+    color: var(--foreground-color);
+    font-weight: bold;
+    font-size: 16px;
+    border: 3px solid transparent;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background: linear-gradient(
+      192deg,
+      var(--text-color) 0%,
+      var(--sway-color2) 6%,
+      var(--foreground-color) 50%,
+      var(--sway-color2) 94%,
+      var(--text-color) 100%
+    );
+    color: var(--text-color);
+  }
