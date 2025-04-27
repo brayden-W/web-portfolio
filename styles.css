@@ -127,7 +127,7 @@ section {
 
 .resume-btn {
   margin: 10px auto;
-  height: 3vh;
+  height: 5vh;
   width: 175px;
   background-color: var(--accent-color);
   display: flex;
@@ -355,9 +355,7 @@ section {
 .gallery {
   overflow: hidden;
   width: 90%;
-  margin: 0 auto;
-  padding-bottom: 40px;
-  
+  margin: 0 auto 25px;
 }
 
 .gallery-cell {
@@ -618,6 +616,12 @@ div > a > img:hover {
     flex-direction: row;
   }
 
+  .gallery {
+    width: 90%;
+    margin: 0 auto 25px;
+    padding-bottom: 20px;
+  }
+  
   .gallery-cell p {
     font-size: 14px;
   }  
