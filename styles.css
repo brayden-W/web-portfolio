@@ -229,6 +229,7 @@ section {
   justify-self: end;
   text-align: center;
   font-size: 10px;
+  padding-top: 3px;
 }
 
 .projects a {
